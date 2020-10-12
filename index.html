@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name=description content="">
+        <meta name=author content="">
+        <title>Wisekey Admin Dashboard</title>
+        <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Nanum Gothic', 'sans-serif','Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i', 'Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i', 'Open Sans']
+                }
+            });
+        </script>
+        <link href="assets/dist/css/base.css" rel=stylesheet type="text/css"/>
+        <link href="assets/plugins/toastr/toastr.min.css" rel=stylesheet type="text/css"/>
+        <link href="assets/plugins/emojionearea/emojionearea.min.css" rel=stylesheet type="text/css"/>
+        <link href="assets/plugins/monthly/monthly.min.css" rel=stylesheet type="text/css"/>
+        <link href="assets/dist/css/component_ui.min.css" rel=stylesheet type="text/css"/>
+        <link href="assets/dist/css/skins/skin-dark-1.min.css" rel=stylesheet type="text/css"/>
+        <link href="assets/dist/css/custom.css" rel=stylesheet type="text/css"/>
+    </head>
+    <body>
+        <div id=wrapper class="wrapper animsition">
+            <!-- Navigation -->
+            <nav class="navbar navbar-fixed-top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">apps</i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="">
+                        <!--<span>AdminPage</span>-->
+                    </a>
+                </div>
+                <div class="nav-container">
+                    <!-- /.navbar-header -->
+                    <ul class="nav navbar-nav hidden-xs">
+                        <li><a id="fullscreen" href="#"><i class="material-icons">fullscreen</i> </a></li>
+                        <!-- /.Fullscreen -->
+                        </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <!-- /.Dropdown -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="material-icons">person_add</i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
+                                <li><a href="login.html"><i class="ti-unlink"></i>&nbsp; Logout</a></li>
+                            </ul><!-- /.dropdown-user -->
+                        </li><!-- /.Dropdown -->
+                        <li class="log_out">
+                            <a href="login.html">
+                                <i class="material-icons">power_settings_new</i>
+                            </a>
+                        </li><!-- /.Log out -->
+                    </ul> <!-- /.navbar-top-links -->
+                </div>
+            </nav>
+            <!-- /.Navigation -->
+            <div class="sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="nav-heading "> <span>Main Menu</span></li>
+                        <li class="active"><a href="index.html" class="material-ripple"><i class="material-icons">home</i> Home</a></li>
+                        <li><a href="table01.html"><i class="material-icons">assignment</i>건물등록관리</a></li>
+                        <li><a href="table02.html"><i class="material-icons">playlist_add</i>임대인ㅣ건물관리자등록</a></li>
+                        <li><a href="table03.html"><i class="material-icons">group_add</i>임차인등록</a></li>
+                        <li><a href="table04.html"><i class="material-icons">people</i>임차인관리</a></li>
+                        <li><a href="table05.html"><i class="material-icons">search</i>입출입검색</a></li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <div class=control-sidebar-bg></div>
+            <div id=page-wrapper>
+                <div class=content>
+                    <div class=content-header>
+                        <div class=header-icon>
+                            <i class=pe-7s-tools></i>
+                        </div>
+                        <div class=header-title>
+                            <h1>Wisekey 관리자페이지</h1>
+                            <small>Wisekey Admin Dashboard.</small>
+                            <ol class=breadcrumb>
+                                <li><a href=index.html><i class=pe-7s-home></i> Home</a></li>
+                                <li class=active>Main</li>
+                            </ol>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="panel panel-bd">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="assets/dist/img/light-logo.png" class="img-responsive" alt="">
+                                            <br>
+                                            <address>
+                                                <strong>Wisekey, Inc.</strong><br>
+                                                서울특별시 송파구 문정동<br>
+                                                wise tower 210<br>
+                                                <abbr title="Phone"></abbr> (02) 5456-7000
+                                            </address>
+                                            <address>
+                                                <strong>Email</strong><br>
+                                                <a href="mailto:#">wisekey@gmail.com</a>
+                                            </address>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="monthly_calender">
+                                                <div class="monthly" id="m_calendar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+        <script src="assets/plugins/jQuery/jquery-1.12.4.min.js"></script>
+        <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/plugins/metisMenu/metisMenu.min.js"></script>
+        <script src="assets/plugins/lobipanel/lobipanel.min.js"></script>
+        <script src="assets/plugins/animsition/js/animsition.min.js"></script>
+        <script src="assets/plugins/fastclick/fastclick.min.js"></script>
+        <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="assets/plugins/toastr/toastr.min.js"></script>
+        <script src="assets/plugins/sparkline/sparkline.min.js"></script>
+        <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
+        <script src="assets/plugins/counterup/waypoints.js"></script>
+        <script src="assets/plugins/emojionearea/emojionearea.min.js"></script>
+        <script src="assets/plugins/monthly/monthly.min.js"></script>
+        <script src="assets/plugins/amcharts/amcharts.js"></script>
+        <script src="assets/plugins/amcharts/ammap.js"></script>
+        <script src="assets/plugins/amcharts/worldLow.js"></script>
+        <script src="assets/plugins/amcharts/serial.js"></script>
+        <script src="assets/plugins/amcharts/export.min.js"></script>
+        <script src="assets/plugins/amcharts/light.js"></script>
+        <script src="assets/plugins/amcharts/pie.js"></script>
+        <script src="assets/dist/js/app.min.js"></script>
+        <script src="assets/dist/js/page/dashboard.min.js"></script>
+        <script src="assets/dist/js/jQuery.style.switcher.min.js"></script>
+    </body>
+</html>
